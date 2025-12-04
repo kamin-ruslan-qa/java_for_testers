@@ -10,27 +10,36 @@ public class Triangle {
         c = sideC;
     }
 
-    public double getPerimeter() {
-        double perimeter = a + b + c;
-        return perimeter;
+
+    public static void main(String[] args) {
+        printperimetrTriangle(7, 7, 7);
     }
-    public double getArea() {
-        double p = getPerimeter() / 2;
 
 
+    //формула вычисления периметра P = a + b + c
+    private static void printperimetrTriangle(double a, double b, double c) {
+        System.out.println("Периметр треугольника: " + perimetrTriangle(a, b, c));
+
+        //Полупериметр рассчитывается как: p = (a + b + c) / 2
+        System.out.println("Полупериметр: " + halfPrtimetr(a, b, c));
+
+        // Площадь по формуле Герона
+        System.out.println("Площадь треугольника: " + areaTriangle(a, b, c));
+    }
+
+    public static double halfPrtimetr(double a, double b, double c) {
+        double p = (a + b + c) / 2.0;
+        return p;
+    }
+
+
+    public static double areaTriangle(double a, double b, double c) {
+        double p = halfPrtimetr(a, b, c);
         double area = Math.sqrt(p * (p - a) * (p - b) * (p - c));
-
         return area;
     }
-        public static void main(String[] args) {
-
-        Triangle triangle1 = new Triangle(3, 4, 5);
-
-            System.out.println("Периметр: " + triangle1.getPerimeter());
-            System.out.println("Площадь: " + triangle1.getArea());
-
-        }
-
-
+    public static double perimetrTriangle(double a, double b, double c) {
+        return a + b + c;
     }
 
+}
