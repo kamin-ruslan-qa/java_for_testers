@@ -26,7 +26,6 @@ public class Triangle {
             throw new IllegalArgumentException("Нарушено неравенство треугольника: " + sideB + " + " + sideC + " <= " + sideA);
         }
 
-
         this.a = sideA;
         this.b = sideB;
         this.c = sideC;
@@ -75,7 +74,7 @@ public class Triangle {
             Triangle triangle3 = new Triangle(23, 26, 18);
             System.out.println("Периметр: " + triangle3.getPerimeter());
             System.out.println("Полупериметр: " + triangle3.getHalfPerimeter());
-            System.out.println("Площадь: " + triangle3.getArea());
+            System.out.println("Площадь треугольника: " + triangle3.getArea());
             System.out.println("Успешно создан");
         }catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
@@ -84,7 +83,7 @@ public class Triangle {
             Triangle triangle4 = new Triangle(-3, 5, 7);
             System.out.println("Периметр: " + triangle4.getPerimeter());
             System.out.println("Полупериметр: " + triangle4.getHalfPerimeter());
-            System.out.println("Площадь: " + triangle4.getArea());
+            System.out.println("Площадь треугольника: " + triangle4.getArea());
         }catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
 
@@ -93,15 +92,10 @@ public class Triangle {
             Triangle triangle5 = new Triangle(3, 3, 7);
             System.out.println("Периметр: " + triangle5.getPerimeter());
             System.out.println("Полупериметр: " + triangle5.getHalfPerimeter());
-            System.out.println("Площадь: " + triangle5.getArea());
+            System.out.println("Площадь треугольника: " + triangle5.getArea());
             System.out.println("Успешно создан");
         }catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-
-
-
-
-
 
         }
     }
