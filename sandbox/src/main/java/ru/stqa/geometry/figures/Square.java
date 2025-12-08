@@ -1,13 +1,13 @@
 package ru.stqa.geometry.figures;
 
-public class Square {
+public record Square(double side) {
 
-    private double side;
+    public Square {
+        if (side < 0) {
+        throw new IllegalArgumentException("Square side should be non-negative");
 
-    public Square(double side) {
-        this.side = side;
     }
-
+}
 
     public static void printSquareArea(Square s) {
        String text = String.format("Площадь квадрата со стороной %f = %f", s.side, s.area());
@@ -19,7 +19,7 @@ public class Square {
         return this.side * this.side;
     }
 
-    public double perimetrs() {
+    public double perimetr() {
         return 4 * this.side;
     }
 }
