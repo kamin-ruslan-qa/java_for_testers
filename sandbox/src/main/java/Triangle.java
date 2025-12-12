@@ -10,7 +10,7 @@ public class Triangle {
             throw new IllegalArgumentException("Сторона А должна быть положительной ");
 
             //неравенство
-        }else if (sideB + sideC <= sideA || sideC + sideA <= sideB || sideA + sideB <= sideC) {
+        } else if (sideB + sideC <= sideA || sideC + sideA <= sideB || sideA + sideB <= sideC) {
             throw new IllegalArgumentException("Нарушено неравенство треугольника: ");
 
         }
@@ -46,7 +46,7 @@ public class Triangle {
             System.out.println("Полупериметр: " + triangle.getHalfPerimeter());
             System.out.println("Площадь: " + triangle.getArea());
             System.out.println("======");
-        }catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
         try {
@@ -55,17 +55,18 @@ public class Triangle {
             System.out.println("Полупериметр: " + triangle2.getHalfPerimeter());
             System.out.println("Площадь треугольника:: " + triangle2.getArea());
             System.out.println("======");
-        }catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
 
 
-        }try {
+        }
+        try {
             Triangle triangle3 = new Triangle(23, 26, 18);
             System.out.println("Периметр: " + triangle3.getPerimeter());
             System.out.println("Полупериметр: " + triangle3.getHalfPerimeter());
             System.out.println("Площадь треугольника: " + triangle3.getArea());
             System.out.println("======");
-        }catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
         try {
@@ -74,16 +75,17 @@ public class Triangle {
             System.out.println("Полупериметр: " + triangle4.getHalfPerimeter());
             System.out.println("Площадь треугольника: " + triangle4.getArea());
             System.out.println("======");
-        }catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
 
 
-        }try {
+        }
+        try {
             Triangle triangle5 = new Triangle(3, 3, 10);
             System.out.println("Периметр: " + triangle5.getPerimeter());
             System.out.println("Полупериметр: " + triangle5.getHalfPerimeter());
             System.out.println("Площадь треугольника: " + triangle5.getArea());
-        }catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
 
         }

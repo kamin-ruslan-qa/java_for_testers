@@ -9,4 +9,5 @@ public class MathTest {
         var z = x / y;
         System.out.println(z);
     }
+
 }
