@@ -1,27 +1,17 @@
+// Импортируем необходимые аннотации и методы для тестирования
 import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MainClassTest {
+
     @Test
-    public void testGetLocalNumber() {
+    public void testGetClassString() {
+
         MainClass mainClass = new MainClass();
+        String result = mainClass.getClassString();
+        boolean containsHello = result.contains("Hello") || result.contains("hello");
 
-        int number = 14;
-            System.out.println("Тест пройден");
-
-            Assert.assertTrue("Ответ должен содержать число 14", number == mainClass.getLocalNumber());
-        }
-        @Test
-    public void testGetClassNumber() {
-        MainClass mainClass = new MainClass();
-        int result = mainClass.getClassNumber();
-        Assert.assertTrue("Метод getClassNumber должен возвращать число больше 45, а вернул " + result,
-                result > 45);
-
-        }
+        Assert.assertTrue("Строка должна содержать 'hello' или 'Hello'. Сейчас она содержит:" + result, containsHello);
     }
-
-
-
-
+}
